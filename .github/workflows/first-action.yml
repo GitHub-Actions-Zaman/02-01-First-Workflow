@@ -1,0 +1,13 @@
+name: First Workflow
+# after workflow_dispatch want to execute
+on: workflow_dispatch
+jobs:
+  first-job:
+    #  අපිට කැමති environment එකක් මෙහිදී runs-on මගින් තොරා ගනී
+    runs-on: ubuntu-latest
+    steps:
+      # under the environment executions
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
